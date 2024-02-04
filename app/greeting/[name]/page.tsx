@@ -1,9 +1,13 @@
 
+type ParamsType = {
+  name: string;
+}
 
-const Greeting = () => {
+const Greeting = ({params}: {params: ParamsType}) => {
+  const name = params.name.charAt(0).toUpperCase() + params.name.slice(1);
   return (
   <div>
-    <h1> Nice to meet you</h1>
+    <h1> Nice to meet you! {name}</h1>
   </div>
   );
 }
