@@ -1,7 +1,6 @@
+import { ParamsType } from "@/types/type";
 
-type ParamsType = {
-  name: string;
-}
+
 
 const Greeting = ({params}: {params: ParamsType}) => {
   const name = params.name.charAt(0).toUpperCase() + params.name.slice(1);
