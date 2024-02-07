@@ -1,8 +1,8 @@
 // mongodb.ts
 
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
-export const ConnectDB = async () => {
+export const ConnectDB = async (): Promise<void> => {
   try {
     const mongoURI = process.env.MONGODB;
 
@@ -12,7 +12,7 @@ export const ConnectDB = async () => {
     }
 
     await mongoose.connect(mongoURI);
-    console.log("DB connection established");
+    // console.log("DB connection established");
   } catch (error) {
     console.error("Error connecting to the database:", error);
   }
